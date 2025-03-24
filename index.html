@@ -1,49 +1,48 @@
-<html>
-  <head>
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flatacuties</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
+</head>
+<body>
     <div class="logo">
-      <h1>Flatacuties</h1>
+        <h1>Flatacuties</h1>
     </div>
 
     <div id="character-bar">
-      <!-- show characters names here -->
+        <!-- Characters appear here -->
     </div>
 
     <div class="characterInfo">
-      <div id="detailed-info">
-        <p id="character-name">Character's Name</p>
-        <img
-          id="image"
-          src="assets/dummy.gif"
-          alt="Character's Name"
-        /><!-- display character image here -->
-        <h4>Total Votes: <span id="vote-count">Character's Votes</span></h4>
-        <form id="votes-form">
-          <input type="text" placeholder="Enter Votes" id="votes" name="votes" />
-          <input type="submit" value="Add Votes" />
-        </form>
-        <button id="reset-btn">Reset Votes</button>
-      </div>
+        <div id="detailed-info">
+            <p id="character-name">Character's Name</p>
+            <img id="character-image" src="assets/dummy.gif" alt="Character's Name" />
+            <h4>Total Votes: <span id="vote-count">0</span></h4>
 
-      <!-- Bonus only! Uncomment the elements below when you are ready to work on the bonus deliverables -->
-      <!-- 
+            <form id="votes-form">
+                <input type="number" id="votes" placeholder="Enter Votes" min="1" required />
+                <input type="submit" value="Add Votes" />
+            </form>
+
+            <button id="reset-btn">Reset Votes</button>
+            <button id="delete-btn">Delete Character</button>
+        </div>
+
         <h4>Add New Character</h4>
         <form id="character-form">
-          <div>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" />
-          </div>
-          <div>
+            <label for="new-name">Name</label>
+            <input type="text" id="new-name" required />
+
             <label for="image-url">Image URL</label>
-            <input type="text" id="image-url" name="image-url" />
-          </div>
-          <input type="submit" value="Add Character" />
-        </form> 
-      -->
+            <input type="text" id="image-url" required />
+
+            <input type="submit" value="Add Character" />
+        </form>
     </div>
+
     <script src="src/index.js"></script>
-  </body>
+</body>
 </html>
